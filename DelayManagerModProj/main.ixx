@@ -16,8 +16,9 @@ int main()
 	util::DelayManager dm(DelayValue);
 	while (!dm.IsElapsed())
 	{
-		std::cout << "Still waiting..\n";
+		std::cout << "\nStill waiting...\n";
 		std::cout << dm << '\n'; // print some debug info
 		std::this_thread::sleep_for(chron::microseconds(LoopDelay));
 	}
+	std::cout << "Done...";
 }
