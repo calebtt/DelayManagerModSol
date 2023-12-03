@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DelayManager.ixx">
+    <ClCompile Include="DelayTimer.ixx">
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="main.ixx">
