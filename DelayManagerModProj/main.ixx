@@ -1,7 +1,5 @@
+import std;
 import DelayManager;
-import <iostream>;
-import <thread>;
-import <chrono>;
 
 /* C++20 modules main example. */
 int main()

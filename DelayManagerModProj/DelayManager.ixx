@@ -1,8 +1,7 @@
+module;
 export module DelayManager;
 
-import <ostream>;
-import <chrono>;
-import <syncstream>;
+import std;
 
 export namespace sds::Utilities
 {
@@ -25,17 +24,17 @@ export namespace sds::Utilities
 		DelayManager& operator=(const DelayManager& other) = default;
 		DelayManager& operator=(DelayManager&& other) = default;
 		~DelayManager() = default;
-		/// <summary>Operator<< overload for std::ostream specialization,
-		///	writes more detailed delay details for debugging.
-		///	Thread-safe, provided all writes to the ostream object
-		///	are wrapped with std::osyncstream!</summary>
+		///// <summary>Operator<< overload for std::ostream specialization,
+		/////	writes more detailed delay details for debugging.
+		/////	Thread-safe, provided all writes to the ostream object
+		/////	are wrapped with std::osyncstream!</summary>
 		friend std::ostream& operator<<(std::ostream& os, const DelayManager& obj) noexcept
 		{
 			std::osyncstream ss(os);
-			ss << "[DelayManager]" << std::endl
-				<< "m_start_time:" << obj.m_start_time.time_since_epoch() << std::endl
-				<< "m_duration (microseconds):" << obj.m_duration << std::endl
-				<< "m_has_fired:" << obj.m_has_fired << std::endl
+			ss << "[DelayManager]" << '\n'
+				<< "m_start_time:" << obj.m_start_time.time_since_epoch() << '\n'
+				<< "m_duration (microseconds):" << obj.m_duration << '\n'
+				<< "m_has_fired:" << obj.m_has_fired << '\n'
 				<< "[/DelayManager]";
 			return os;
 		}
